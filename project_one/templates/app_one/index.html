@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>app_one</title>
+    <link rel="stylesheet" href="{%static 'css/mystyle.css'%}">
+</head>
+<body>
+    <!-- <h1>Hey this is BUGATTI CHIRON!!</h1>
+    <img src="{% static 'image/car.jpg' %}" alt="bugatti CHIRON"> -->
+        <!-- <h1>form index.html</h1>
+    {{insert_me}} -->
+<h1>ACCESS RECORDS:</h1>
+<div>
+    {% if insert_me%}
+    <table>
+        <thead>
+            <th>Site Name</th>
+            <th>Date Accessed</th>
+        </thead>
+        {% for a in insert_me%}
+        <tr>
+            <td>{{ a.name}}</td>
+            <td>{{ a.date}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    {%else%}
+    <p>no records found!!</p>
+    {% endif %}
+</div>
+
+
+
+</body>
+</html>
